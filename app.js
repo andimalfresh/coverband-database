@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
-const port = process.env.PORT || 3336;
+const port = process.env.PORT || 6661;
+const queries = require('./queries')
 
 app.listen(
   port,
@@ -8,5 +9,7 @@ app.listen(
 );
 
 app.get("/", (req, res) => {
-  res.send("YAYER");
+  queries.listAll().then(bands => {
+    res.send(bands)
+  })
 });
