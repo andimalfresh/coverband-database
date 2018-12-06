@@ -4,7 +4,7 @@
   "description": "<!-- Ok here is the API/DB Data For DMTHRUS PROJECT -->",
   "main": "app.js",
   "scripts": {
-    "start" : "node app.js",
+    "start": "node app.js",
     "dev": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -12,6 +12,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "knex": "^0.15.2",
+    "pg": "^7.7.1"
   }
 }
