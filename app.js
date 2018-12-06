@@ -5,8 +5,8 @@ const queries = require('./queries')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 
-app.get(cors())
-app.get(bodyParser.json())
+app.use(cors())
+app.use(bodyParser.json())
 app.listen(port, console.log(`Summon the Dark Lord! We are running on PORT ${port} !!!`))
 app.get("/", (req, res) => {
   queries.listAll().then(bands => res.send(bands))
